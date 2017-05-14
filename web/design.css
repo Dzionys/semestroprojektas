@@ -1,0 +1,26 @@
+body {
+	background: dimgray;
+  font-family: Arial;
+  color: white;
+}
+
+.div-style {
+	text-align: center;
+	padding: 30px;
+  font-size: 20px;
+	background: gray;
+	border-radius: 15px;
+	overflow: auto;
+	width: auto;
+	margin: 10% 35% 10% 35%;
+}
+
+a {
+	color: white;
+	font-size: 16px !important;
+}
+
+input[type=text],input[type=password],input[type=email],button {
+    width: 90%;
+		height: 2em;
+}

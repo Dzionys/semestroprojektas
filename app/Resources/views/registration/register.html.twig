@@ -1,0 +1,17 @@
+{% block body %}
+<div class="div-style">
+{{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+    <br>
+    <button type="submit">Register</button>
+{{ form_end(form) }}
+<a href="/login">Login</a>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('design.css') }}" rel="stylesheet">
+{% endblock %}
