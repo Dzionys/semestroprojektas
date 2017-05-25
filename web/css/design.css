@@ -1,0 +1,11 @@
+body {
+	background: #488;
+	/* "Kale Salad" by Claudio Guglieri */
+	background-image:  url("http://i.imgur.com/npjL7qz.jpg");
+}
+button:hover {
+	background: #bababa;
+}
+div .jumbotron {
+	margin: 7% 15% 7% 15%;
+}
