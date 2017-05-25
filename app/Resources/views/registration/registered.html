@@ -1,7 +1,17 @@
 {% block body %}
-<div class="div-style">You've successfully registered. You can now <a href="/login">log in.</div>
+<div class="container">
+<div class="jumbotron">
+You've successfully registered. You can now <a href="/login" class="btn btn-primary" role="button">Log in</a>
+</div>
+</div>
 {% endblock %}
 
 {% block stylesheets %}
-    <link href="{{ asset('design.css') }}" rel="stylesheet">
+<link href="{{ asset('css/design.css') }}" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block javascript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 {% endblock %}
