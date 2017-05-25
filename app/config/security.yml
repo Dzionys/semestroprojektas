@@ -25,7 +25,7 @@ security:
             anonymous: ~
             form_login:
               always_use_default_target_path: true
-              default_target_path: post
+              default_target_path: /post
               login_path: login
               check_path: login
             # activate different ways to authenticate
