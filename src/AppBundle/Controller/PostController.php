@@ -33,8 +33,12 @@ class PostController extends Controller
     public function newAction(Request $request)
     {
         $post = new Post();
+        $user = $this->get('security.token_storage')->getToken()->getUser();
         $form = $this->createForm('AppBundle\Form\PostType', $post);
         $form->handleRequest($request);
+        $post->setUserid($user->getId());
+        $post->setState(0);
+
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
@@ -51,9 +55,8 @@ class PostController extends Controller
     }
 
     /**
-     * Finds and displays a post entity.
-     *
-     */
+    * @Route("/post/show/{id}", name="post_show")
+    */
     public function showAction(Post $post)
     {
         $deleteForm = $this->createDeleteForm($post);
@@ -65,7 +68,7 @@ class PostController extends Controller
     }
 
     /**
-    * @Route("/post/edit", name="post_edit")
+    * @Route("/post/edit/{id}", name="post_edit")
     */
     public function editAction(Request $request, Post $post)
     {
@@ -87,9 +90,8 @@ class PostController extends Controller
     }
 
     /**
-     * Deletes a post entity.
-     *
-     */
+    * @Route("/post/delete/{id}", name="post_delete")
+    */
     public function deleteAction(Request $request, Post $post)
     {
         $form = $this->createDeleteForm($post);
