@@ -1,4 +1,19 @@
-crud
-====
+# Semestro projektas
 
-A Symfony project created on May 13, 2017, 10:32 pm.
+### Setup
+
+Download needed files and set up parameters with Composer:
+
+`composer install`
+
+Create the database:
+
+`run php bin/console doctrine:database:create`
+
+Update the database:
+
+`php bin/console doctrine:schema:update --force`
+
+Run the server:
+
+`php bin/console server:run`
